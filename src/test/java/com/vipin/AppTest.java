@@ -1,38 +1,24 @@
 package com.vipin;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+
+import org.junit.Test;
+import redis.embedded.RedisServer;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+private RedisServer redisServer;
+    ;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testSimpleRun() throws Exception {
+        redisServer = new RedisServer(6379);
+        redisServer.start();
+
+        redisServer.stop();
     }
 }
