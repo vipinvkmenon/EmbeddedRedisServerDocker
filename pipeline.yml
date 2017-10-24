@@ -6,7 +6,7 @@ resources:
   type: git
   source:
     uri: https://github.com/vipinvkmenon/EmbeddedRedisServerDocker.git
-    branch: main
+    branch: master
     skip_cert_check: true
     skip_ssl_verification: true
 
