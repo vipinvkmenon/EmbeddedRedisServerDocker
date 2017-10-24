@@ -2,7 +2,10 @@ package com.vipin;
 
 
 import org.junit.Test;
+import redis.clients.jedis.Jedis;
 import redis.embedded.RedisServer;
+
+import java.io.File;
 
 /**
  * Unit test for simple App.
@@ -16,9 +19,12 @@ private RedisServer redisServer;
 
     @Test
     public void testSimpleRun() throws Exception {
-        redisServer = new RedisServer(6379);
-        redisServer.start();
+        File file = new File("/tmp/redisServer/redis-server-2.8.19");
+        redisServer = new RedisServer(file,6379);
 
+        redisServer.start();
+        Jedis jedis = new Jedis();
+        System.out.print(jedis.ping());
         redisServer.stop();
     }
 }
