@@ -5,8 +5,8 @@ resources:
 - name: source-code
   type: git
   source:
-    uri: https://github.wdf.sap.corp/vipinmenon/IOT--CF.git
-    branch: concourse_test
+    uri: https://github.com/vipinvkmenon/EmbeddedRedisServerDocker.git
+    branch: main
     skip_cert_check: true
     skip_ssl_verification: true
 
