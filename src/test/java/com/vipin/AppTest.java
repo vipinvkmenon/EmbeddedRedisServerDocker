@@ -32,7 +32,8 @@ private RedisServer redisServer;
                 .override(OS.MAC_OS_X, Architecture.x86, "/path/to/macosx/redis")
                 .override(OS.MAC_OS_X, Architecture.x86_64, "/path/to/macosx/redis");
 
-        redisServer = new RedisServer(customProvider, 6379);
+        //redisServer = new RedisServer(customProvider, 6379);
+        redisServer = new RedisServer(6379);
 
 
 
