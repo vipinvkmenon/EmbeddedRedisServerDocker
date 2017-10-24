@@ -2,6 +2,8 @@
 
 set -e -x
 
+
+uname -a
 chmod 777 /tmp
 mkdir /tmp/redisServer
 chmod 777 /tmp/redisServer
